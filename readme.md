@@ -1,17 +1,14 @@
-# Webpack 2 - Yarn - Sass - ES6 Boilerplate
+# React - Webpack 3 - tyepscript Starter
 
-This is a Webpack 2, ES6 & PostCSS boilerplate that utilizes some of the latest open source tools around such as:
+This is a Webpack 3, ES6 & PostCSS boilerplate that utilizes some of the latest open source tools around such as:
 
 * [Node.js](https://github.com/nodejs/node)
 * [Yarn](https://github.com/yarnpkg)
-* [Webpack 2](https://github.com/webpack/webpack)
-* [Babel](https://github.com/babel/babel) (ES6) transpiling
-* [ESLint](https://github.com/eslint/eslint) for linting
-* [PostCSS](https://github.com/postcss/postcss) w/ [cssnext](https://github.com/MoOx/postcss-cssnext)
-* [Sass](https://github.com/sass/sass)
+* [Webpack 3](https://github.com/webpack/webpack)
+* [Babel](https://github.com/babel/babel) 
 * ...and more
 
-This boilerplate is intended to be small in scope so that it can be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with Webpack 2.
+This boilerplate is intended to be small in scope so that it can be easily extended and customized, or used as a learning tool for folks who are trying to become familiar with Webpack 3.
 
 ## license
 This boilerplate is fully open source and public domain, so you are free to do whatever you wish with it -- commercially or personally.
@@ -41,25 +38,9 @@ yarn run dev
 ### building for production
 Use `yarn run build` in your project root to run a production build.
 
-Production builds compile & minify your assets into `/dist` for distribution and/or integration into whatever codebase you'll be using these assets in.
+Production builds compile & minify your assets into `/build` for distribution and/or integration into whatever codebase you'll be using these assets in.
 
 ```
 cd /path/to/repo
 yarn run build
 ```
-
-## features you may want to remove
-
-### Sass
-
-This project uses Sass, if you prefer Less or just plain old css you can remve it from the project.
-
-1. Change `test: /\.sass$/` in both `/webpack/webpack.config.prod.js` and `/webpack/webpack.config.dev.js` to `test: /\.css$/` or your choice of file extension.
-2. Remove `sass-loader` from both `/webpack/webpack.config.prod.js` and `/webpack/webpack.config.dev.js`
-3. Run `yarn remove node-sass sass-loader` dependency from `/package.json`
-
-## features you may want to customize
-
-### javascript linting
-
-This project uses [ESLint](http://eslint.org/) for Javascript (ES6) linting. The config (`/.eslintrc`) included out of the box is based on the create-react-app file. It is focused on warnings and do not include any plugins. I recommend modifying this to your liking. Check out [the official docs](http://eslint.org/docs/2.0.0/rules/) for more information.
