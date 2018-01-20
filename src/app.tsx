@@ -1,4 +1,24 @@
-import * as React from 'React'
-import * as ReactDOM from 'react-dom'
+import * as React from 'react'
+import './App.css'
 
-ReactDOM.render(<h1>App works !</h1>, document.getElementById('app-root'))
+const logo = require('./assets/logo.svg')
+
+interface Props {
+  typedProp: string
+}
+
+class App extends React.Component<Props> {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">App works !</h1>
+        </header>
+        <p className="App-intro">{this.props.typedProp}</p>
+      </div>
+    )
+  }
+}
+
+export default App
